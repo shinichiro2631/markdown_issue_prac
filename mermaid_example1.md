@@ -1,75 +1,27 @@
-## VSCodeでMermaidを利用する方法や便利な拡張機能
-##### Mermaidとは、コードベースでガントチャートやフロー図などの作成が可能となるライブラリです。
-2022年にGitHubやQiitaでもサポートが開始し、Markdownに専用のコードを書くことで図の挿入が出来るようになりました。
-
-では、VSCodeでMermaidを使ってフローチャートを書いてみましょう！
-
-#### チャートの向きの変え方
-##### TD(Top-Down)
-上から下へ
+## VSCodeでmermaidを利用する方法や便利な拡張機能
+1. 利用する方法
+```graph TD;
+    TypeA-->TypeB;
+    TypeA-->TypeC;
+    TypeB-->TypeD;
+    TypeC-->TypeD;
 ```
-graph TD;
-    A(1st)-->B(2nd);
-```
+上記のようなコードを書きます。
+
+実際に、mermaid記法で図を出してみようと思います。
 ```mermaid
 graph TD;
-    A(1st)-->B(2nd);
+    TypeA-->TypeB;
+    TypeA-->TypeC;
+    TypeB-->TypeD;
+    TypeC-->TypeD;
 ```
-##### TB(Top to Bottom)
-上から下へ（上記と同様）
-```
-graph TB;
-    A(1st)-->B(2nd);
-```
-```mermaid
-graph TB;
-    A(1st)-->B(2nd);
-```
-##### BT(Bottm to Top)
-下から上へ（用途は少ない…）
-```
-graph BT;
-    A(1st)-->B(2nd);
-```
-```mermaid
-graph BT;
-    A(1st)-->B(2nd);
-```
-##### LR(left to right)
-左から右へ
-```
-graph LR;
-    A(1st)-->B(2nd);
-```
-```mermaid
-graph LR;
-    A(1st)-->B(2nd);
-```
-##### RL(Right to Left)
-右から左へ
-```
-graph RL;
-    A(1st)-->B(2nd);
-```
-```mermaid
-graph RL;
-    A(1st)-->B(2nd);
-```
-
-
-
-```
-graph TD;
-    A(1st)-->B(2nd);
-    A(1st)-->C(3rd);
-    B(2nd)-->D(4th);
-    C(3rd)-->D(4th);
-```
-
-```mermaid
-graph TD;
-    A(1st)-->B(2nd);
-    A(1st)-->C(3rd);
-    B(2nd)-->D(4th);
-    C(3rd)-->D(4th);
-```
+mermaid記法の図の出し方は、上記のコードに"mermaid"と書くと、上のような図が出てきます。これがmermaid記法の使い方です。
+2. 便利な拡張機能
+今回は3つ程拡張機能を紹介しようと思います。
+１,Mermaid Diagrams (mermaid) by Markdown Preview Enhanced
+この拡張機能は、この拡張機能は、Mermaidを使用して作成したダイアグラムをMarkdownファイル内でプレビューする機能を提供します。Markdownファイル内でMermaidコードを記述し、プレビューを表示すると、自動的にダイアグラムが表示されます。
+２,Paste Image (Mushan) by Jun Han
+この拡張機能は,クリップボードにある画像を簡単にVSCodeに貼り付ける機能を提供します。Mermaidのプレビュー画像をエクスポートし、クリップボードにコピーした後、この拡張機能を使用してVSCodeに貼り付けることができます。
+３.Mermaid Preview (bierner):
+ この拡張機能は、Mermaidコードをリアルタイムでプレビューする機能を提供します。Mermaidファイルを開いたままで作業すると、変更が自動的にプレビューに反映されます。
